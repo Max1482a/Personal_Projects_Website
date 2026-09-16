@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Project Documentation</title>
+
+<style>
+    body {
+        background: #000;
+        color: #fff;
+        font-family: 'Segoe UI', sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    h1 {
+        text-align: center;
+        font-weight: 300;
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+
+    .project-container {
+        width: 90%;
+        max-width: 900px;
+        margin: auto;
+        margin-top: 30px;
+    }
+
+    .project-card {
+        background: rgba(255,255,255,0.05);
+        border: 1px solid rgba(255,255,255,0.2);
+        border-radius: 12px;
+        padding: 20px;
+        margin-bottom: 25px;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .project-card img {
+        width: 180px;
+        height: 120px;
+        object-fit: cover;
+        border-radius: 10px;
+        border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .project-info {
+        flex: 1;
+        min-width: 250px;
+    }
+
+    .project-info h2 {
+        margin: 0;
+        font-weight: 400;
+    }
+
+    .project-info p {
+        margin: 8px 0 15px 0;
+        color: #ccc;
+    }
+
+    .view-btn, .read-btn {
+        background: transparent;
+        border: 1px solid #fff;
+        padding: 10px 20px;
+        border-radius: 50px;
+        color: #fff;
+        cursor: pointer;
+        transition: 0.3s;
+        text-decoration: none;
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    .view-btn:hover, .read-btn:hover {
+        background: #fff;
+        color: #000;
+    }
+
+    .dropdown-content {
+        display: none;
+        margin-top: 15px;
+        padding: 15px;
+        background: rgba(255,255,255,0.05);
+        border-radius: 10px;
+        border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .dropdown-content p {
+        color: #ccc;
+        line-height: 1.5;
+    }
+
+    .dropdown-content a {
+        display: inline-block;
+        margin-top: 10px;
+        color: #00aaff;
+        text-decoration: none;
+        border: 1px solid #00aaff;
+        padding: 8px 16px;
+        border-radius: 50px;
+        transition: 0.3s;
+    }
+
+    .dropdown-content a:hover {
+        background: #00aaff;
+        color: #000;
+    }
+</style>
+</head>
+
+<body>
+
+<h1>Project Documentation</h1>
+
+<div class="project-container">
+
+    <!-- Dissertation Project -->
+    <div class="project-card">
+        <img src="Dissertation_Logo_Image.jpg" alt="Dissertation Project Logo">
+        <div class="project-info">
+            <h2>Dissertation Project</h2>
+            <p>Final-year cybersecurity dissertation focusing on data visualization and threat analysis.</p>
+            <button class="read-btn" onclick="toggleDropdown('dissertation')">Read More</button>
+        </div>
+        <div id="dissertation" class="dropdown-content">
+            <p>
+                This dissertation project explores advanced cybersecurity analytics and visualization techniques. 
+                It integrates multiple data sources to identify patterns in network activity and potential vulnerabilities. 
+                The project includes a full technical report, code samples, and a demonstration of the visualization dashboard.
+            </p>
+            <a href="../Project_Repository/Repository.html">Go to Repository</a>
+        </div>
+    </div>
+
+    <!-- Proxy Server Project -->
+    <div class="project-card">
+        <img src="Proxy_Server_logo.jpg" alt="Proxy Server Project Logo">
+        <div class="project-info">
+            <h2>Proxy Server Project</h2>
+            <p>Network-based project demonstrating proxy configuration and secure data routing.</p>
+            <button class="read-btn" onclick="toggleDropdown('proxy')">Read More</button>
+        </div>
+        <div id="proxy" class="dropdown-content">
+            <p>
+                The Proxy Server project focuses on implementing a secure and efficient proxy system for managing client requests. 
+                It demonstrates traffic routing, caching, and encryption mechanisms to ensure data integrity and privacy. 
+                The project highlights my understanding of server-side networking and system optimization.
+            </p>
+            <a href="../Project_Repository/Repository.html">Go to Repository</a>
+        </div>
+    </div>
+
+</div>
+
+<script>
+function toggleDropdown(id) {
+    const section = document.getElementById(id);
+    section.style.display = section.style.display === "block" ? "none" : "block";
+}
+</script>
+
+</body>
+</html>

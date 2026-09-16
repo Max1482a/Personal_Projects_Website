@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cyber Profile - Maxwell</title>
+
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html, body {
+        height: 100%;
+        font-family: 'Segoe UI', system-ui, sans-serif;
+        background: #000;
+        color: #00ff88;
+        overflow-x: hidden;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: radial-gradient(circle at center, #001a00 0%, #000 80%);
+        position: relative;
+    }
+
+    /* Animated dragon sides */
+    .dragon-left, .dragon-right {
+        position: fixed;
+        top: 0;
+        width: 150px;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: contain;
+        opacity: 0.15;
+        animation: drift 20s linear infinite;
+        z-index: 0;
+    }
+
+    .dragon-left {
+        left: 0;
+        background-image: url('dragon_left.png');
+        background-position: left center;
+    }
+
+    .dragon-right {
+        right: 0;
+        background-image: url('dragon_right.png');
+        background-position: right center;
+    }
+
+    @keyframes drift {
+        0% { background-position-y: 0%; }
+        100% { background-position-y: 100%; }
+    }
+
+    .container {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        padding: 2rem;
+        max-width: 800px;
+        width: 90%;
+        border: 1px solid rgba(0,255,136,0.3);
+        border-radius: 12px;
+        background: rgba(0,255,136,0.05);
+        box-shadow: 0 0 25px rgba(0,255,136,0.2);
+    }
+
+    .title {
+        font-size: 2.4rem;
+        font-weight: 400;
+        letter-spacing: 0.15em;
+        margin-bottom: 1rem;
+        color: #00ff88;
+        text-shadow: 0 0 10px #00ff88;
+        font-family: 'Consolas', monospace;
+    }
+
+    .info-card {
+        text-align: left;
+        padding: 1.5rem;
+        border-top: 1px solid rgba(0,255,136,0.3);
+    }
+
+    .info-card h2 {
+        font-size: 1.3rem;
+        margin-bottom: 0.5rem;
+        color: #00ff88;
+        text-shadow: 0 0 8px #00ff88;
+        font-family: 'Consolas', monospace;
+    }
+
+    .info-card p, .info-card ul {
+        margin-bottom: 1rem;
+        line-height: 1.6;
+        color: #baffd9;
+    }
+
+    ul { padding-left: 1rem; }
+
+    .nav-btn {
+        display: inline-block;
+        margin-top: 2rem;
+        padding: 0.8rem 2rem;
+        border: 1px solid #00ff88;
+        border-radius: 50px;
+        color: #00ff88;
+        text-decoration: none;
+        font-family: 'Consolas', monospace;
+        transition: 0.3s;
+    }
+
+    .nav-btn:hover {
+        background: #00ff88;
+        color: #000;
+        box-shadow: 0 0 20px #00ff88;
+    }
+</style>
+</head>
+
+<body>
+    <div class="dragon-left"></div>
+    <div class="dragon-right"></div>
+
+    <div class="container">
+        <h1 class="title">Cyber Profile: Maxwell MacDonald</h1>
+
+        <div class="info-card">
+            <h2>About Me</h2>
+            <p>Technology graduate specialising in Cyber Security, Infrastructure Support, and Data Analysis. Experienced in enterprise systems, network configuration, and cloud architecture with a strong focus on security and operational resilience.</p>
+
+            <h2>Core Technology Skills</h2>
+            <ul>
+                <li>IT Infrastructure & Operations • Endpoint Management • Cloud Support</li>
+                <li>Microsoft Intune • SOTI MDM • Device Lifecycle Management</li>
+                <li>Cisco Networking • TCP/IP • VPNs • Network Troubleshooting</li>
+                <li>Security Monitoring • Risk Management • Incident Response</li>
+                <li>Data Analysis • Excel Reporting • Business Performance Insight</li>
+            </ul>
+
+            <h2>Professional Experience</h2>
+            <p><strong>Infrastructure Consultant — Private Contracts (2026)</strong><br>
+            Designed isolated network architecture, produced disaster recovery documentation, and contributed to ISO 27001-aligned safety processes.</p>
+
+            <p><strong>Infrastructure Assistant Intern — Wates Group Ltd (2025)</strong><br>
+            Supported cloud server updates, handled security tickets, and worked with SOTI and Intune during a major device migration project.</p>
+
+            <p><strong>IT Lab Technician — University of Gloucestershire (2024–2025)</strong><br>
+            Configured Cisco enterprise devices, mentored students, and assisted teaching modules in networking and web development.</p>
+
+            <h2>Education</h2>
+            <p><strong>BSc (Hons) Cyber Security — University of Gloucestershire</strong><br>
+            Upper Second Class (2:1). Modules included Cloud Computing, Advanced Networking & Security, Secure Coding, and Cyber Security Management.</p>
+
+            <p><strong>Information Technology Extended Diploma — Wiltshire College</strong><br>
+            Triple Distinction.</p>
+
+            <h2>Interests</h2>
+            <p>Cyber Security • Networking • Cloud Architecture • Home Server Setup • Fitness & Endurance Training</p>
+        </div>
+
+        <a href="../Home_Page/Home_Page.html" class="nav-btn">Back to Main</a>
+    </div>
+</body>
+</html>
